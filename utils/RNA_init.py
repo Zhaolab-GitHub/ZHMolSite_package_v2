@@ -75,7 +75,7 @@ def RNA_init(
         "https://huggingface.co/cuhkaih/rnafm/resolve/main/"
         "RNA-FM_pretrained.pth?download=true"
     )
-
+    os.makedirs('pretrained', exist_ok=True)
     rna_fm_path = Path("pretrained/RNA-FM_pretrained.pth")
 
     # Download the model if the weight file does not exist or is empty

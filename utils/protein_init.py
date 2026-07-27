@@ -81,6 +81,7 @@ def protein_init(seqs, seq_files=None, pdb_files=None, pdbcodes=None):
 
 
     # Download the main ESM-2 model weight
+    os.makedirs('pretrained', exist_ok=True)
     esm2_model_path = download_if_missing(
         file_path="pretrained/esm2_t33_650M_UR50D.pt",
         url=(
