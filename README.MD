@@ -115,7 +115,7 @@ The following Jupyter notebooks are provided for evaluating ZHMolSite on the ben
 - `2_CASP_PZ_evaluate.ipynb`: Evaluates ZHMolSite on the CASP_PZ test set.
 - `3_FoldBench21_evaluate.ipynb`: Evaluates ZHMolSite on the FoldBench21 test set.
 
-> **Note:** To evaluate the test sets, users should first download the “Data” archive from the corresponding Zenodo repository.
+> **Note:** To evaluate the test sets, users should first download the “Data” archive from the corresponding Zenodo repository: https://zenodo.org/records/21623871.
 
 ## Predicting Protein-Binding Nucleotides
 
