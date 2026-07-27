@@ -24,6 +24,7 @@ Download or clone this repository, navigate to the project root directory, and c
 
 ```bash
 git clone https://github.com/Zhaolab-GitHub/ZHMolSite_package_v2.git
+cd ZHMolSite_package_v2
 conda create -n zhmolsite python=3.9 -y
 conda activate zhmolsite
 ```
