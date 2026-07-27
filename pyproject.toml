@@ -42,6 +42,7 @@ dependencies = [
 notebook = [
     "jupyter==1.0.0",
     "matplotlib==3.9.4",
+    "fastjsonschema==2.22.0",
 ]
 
 # The CPU and CUDA extras use the same public package versions. The wheel
