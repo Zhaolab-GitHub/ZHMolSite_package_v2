@@ -1,0 +1,11 @@
+{
+    "work_dir": "example/8PTZ_X_C_seq",
+    "project_name": "8PTZ_X_C_seq",
+    "RNA_fasta_file": "example/8PTZ_X_C_seq/8PTZ_X_C_RNA.fa",
+    "prot_fasta_file": "example/8PTZ_X_C_seq/8PTZ_X_C_protein.fa",
+    "RNA_pdb_file": null,
+    "prot_pdb_file": null,
+    "rhofold_path": "RhoFold",
+    "model_path": "trained_model/model.pth",
+    "RNA_thresh": 0.521667
+}
