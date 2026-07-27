@@ -110,6 +110,9 @@ The following Jupyter notebooks are provided for evaluating ZHMolSite on the ben
 
 - `1_TE_evaluate.ipynb`: Evaluates ZHMolSite on the TE test set.
 - `2_CASP_PZ_evaluate.ipynb`: Evaluates ZHMolSite on the CASP_PZ test set.
+- `3_FoldBench21_evaluate.ipynb`: Evaluates ZHMolSite on the FoldBench21 test set.
+
+> **Note:** To evaluate the test sets, users should first download the “Data” archive from the corresponding Zenodo repository: https://zenodo.org/records/21616001.
 
 ## Predicting Protein-Binding Nucleotides
 
@@ -120,10 +123,10 @@ ZHMolSite predicts protein-binding nucleotides from RNA and protein sequences, w
 Run the prediction script from the root directory of the ZHMolSite project and specify a configuration file using `--config`:
 
 ```bash
-# Example using an experimentally determined RNA–protein complex
+# Example using an experimentally determined RNA-protein complex
 python ZHMolSite_predict.py --config example/8PTZ_X_C/config.json
 
-# Example using an aminoacyl-tRNA synthetase (aaRS)–tRNA complex
+# Example using an aminoacyl-tRNA synthetase (aaRS)-tRNA complex
 python ZHMolSite_predict.py --config example/aaRS_tRNA/config.json
 ```
 
