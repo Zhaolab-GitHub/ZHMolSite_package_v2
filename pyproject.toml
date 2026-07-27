@@ -1,0 +1,97 @@
+[build-system]
+requires = [
+    "setuptools>=77.0.3",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "zhmolsite"
+version = "0.1.2"
+description = "Prediction of RNA-binding nucleotides with explicit consideration of protein receptors"
+readme = "README.MD"
+requires-python = ">=3.9,<3.10"
+
+dependencies = [
+    # Scientific computing
+    "numpy==1.26.4",
+    "pandas==2.2.3",
+    "scipy==1.10.1",
+    "scikit-learn>=1.2,<2",
+    "biopython==1.83",
+    "tqdm==4.66.2",
+
+    # Structural biology
+    "freesasa==2.2.1",
+    "scikit-image==0.24.0",
+
+    # Protein/RNA language models
+    "fair-esm==2.0.0",
+    "rna-fm==0.2.2",
+    "ptflops==0.6.9",
+    "mxfold2==0.1.2",
+
+    # Model-weight downloads
+    "huggingface_hub>=0.20,<1.0",
+
+]
+
+
+[project.optional-dependencies]
+notebook = [
+    "jupyter==1.0.0",
+    "matplotlib==3.9.4",
+]
+
+# The CPU and CUDA extras use the same public package versions. The wheel
+# indexes supplied during installation select the corresponding +cpu or
+# +cu118 builds.
+cpu = [
+    "torch==2.0.0",
+    "torchvision==0.15.1",
+    "torchaudio==2.0.1",
+    "torch-geometric==2.1.0",
+    "torch-scatter==2.1.1",
+    "torch-sparse==0.6.17",
+    "torch-cluster==1.6.1",
+]
+
+cu118 = [
+    "torch==2.0.0",
+    "torchvision==0.15.1",
+    "torchaudio==2.0.1",
+    "torch-geometric==2.1.0",
+    "torch-scatter==2.1.1",
+    "torch-sparse==0.6.17",
+    "torch-cluster==1.6.1",
+]
+
+
+[project.scripts]
+zhmolsite = "ZHMolSite_predict:main"
+
+
+[tool.setuptools]
+py-modules = [
+    "ZHMolSite_predict",
+]
+include-package-data = true
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "models",
+    "models.*",
+    "utils",
+    "utils.*",
+    "trained_model",
+    "trained_model.*",
+]
+
+
+[tool.setuptools.package-data]
+trained_model = [
+    "*.pth",
+]
